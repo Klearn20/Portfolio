@@ -27,7 +27,7 @@ export const ContactSection = () => {
         "service_az7wjxf",
         "template_8bh7qeh",
         form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY // safer key usage
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -124,6 +124,7 @@ export const ContactSection = () => {
                   type="text"
                   id="name"
                   name="name"
+                  autoComplete="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="John Kim Carlo Sarcia..."
@@ -138,6 +139,7 @@ export const ContactSection = () => {
                   type="email"
                   id="email"
                   name="email"
+                  autoComplete="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="john@gmail.com"
@@ -151,6 +153,7 @@ export const ContactSection = () => {
                 <textarea
                   id="message"
                   name="message"
+                  autoComplete="off"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello, I'd like to talk about..."
