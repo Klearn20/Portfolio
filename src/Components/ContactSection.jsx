@@ -146,17 +146,18 @@ export const ContactSection = () => {
               Send a Message
             </h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Hidden fields for EmailJS */}
+              <input type="hidden" name="receiver_name" value="John Kim Carlo Sarcia" />
+              <input type="hidden" name="time" value={new Date().toLocaleString()} />
+
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="sender_name"
                   required
                   value={formdata.name}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
@@ -166,11 +167,9 @@ export const ContactSection = () => {
                   }
                 />
               </div>
+
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Your Email
                 </label>
                 <input
@@ -186,11 +185,9 @@ export const ContactSection = () => {
                   }
                 />
               </div>
+
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
                   Your Message
                 </label>
                 <textarea
@@ -206,6 +203,7 @@ export const ContactSection = () => {
                   rows="5"
                 />
               </div>
+
               <button
                 type="submit"
                 disabled={isSubmitting}
