@@ -1,4 +1,5 @@
 import {
+  Facebook,
   Instagram,
   Linkedin,
   Mail,
@@ -125,7 +126,11 @@ export const ContactSection = () => {
                 Connect With Me
               </h4>
               <div className="flex space-x-4 justify-center md:justify-start">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://linkedin.com/in/john-kim-carlo-sarcia-a0a57a275"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin />
                 </a>
                 <a href="#" target="_blank" rel="noopener noreferrer">
@@ -134,8 +139,12 @@ export const ContactSection = () => {
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   <Instagram />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <Twitch />
+                <a
+                  href="https://www.facebook.com/klearn20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Facebook />
                 </a>
               </div>
             </div>
@@ -147,11 +156,22 @@ export const ContactSection = () => {
             </h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Hidden fields for EmailJS */}
-              <input type="hidden" name="receiver_name" value="John Kim Carlo Sarcia" />
-              <input type="hidden" name="time" value={new Date().toLocaleString()} />
+              <input
+                type="hidden"
+                name="receiver_name"
+                value="John Kim Carlo Sarcia"
+              />
+              <input
+                type="hidden"
+                name="time"
+                value={new Date().toLocaleString()}
+              />
 
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2"
+                >
                   Your Name
                 </label>
                 <input
@@ -169,7 +189,10 @@ export const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2"
+                >
                   Your Email
                 </label>
                 <input
@@ -187,7 +210,10 @@ export const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2"
+                >
                   Your Message
                 </label>
                 <textarea
