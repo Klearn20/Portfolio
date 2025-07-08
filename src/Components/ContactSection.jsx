@@ -13,16 +13,19 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 
+// ContactSection component displays contact info and a contact form
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // State for form data
   const [formdata, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
+  // Handles form submission and sends email using emailjs
   const handleSubmit = (e) => {
     e.preventDefault();
 
